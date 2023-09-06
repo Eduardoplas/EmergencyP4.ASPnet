@@ -13,6 +13,16 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    public string StringHola()
+    {
+        return "hola";
+    }
+
+    public IActionResult Enfermedades()
+    {
+        return View();
+    }
+
     public IActionResult Index()
     {
         return View();
