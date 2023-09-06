@@ -22,7 +22,10 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    public IActionResult Ansiedad()
+    {
+        return View();
+    }
     public IActionResult Index()
     {
         return View();
