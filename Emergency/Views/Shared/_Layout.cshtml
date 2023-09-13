@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Emergency.styles.css" asp-append-version="true" />
 </head>
+<style>
+    
+    header {
+        background-color: #007bff; /* Color de fondo azul */
+        color: #fff; /* Color del texto blanco */
+        padding: 20px; /* Espaciado interior para el contenido de la cabecera */
+
+    }
+</style>
+<body style="background-color: #f0f0f0;">
+    <!-- Color de fondo gris claro -->
+    <!-- Contenido de tu página -->
+</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página con Encabezado Colorido</title>
+    <style>
+        /* Estilos CSS para el título */
+        h1 {
+            color: #ff5733; /* Cambiar el color del texto del encabezado */
+        }
+    </style>
+</head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -22,21 +46,21 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Enfermedades">Enfermedades</a>
-                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Más</a>
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Enfermedades</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/Home/Ansiedad">Ansiedad</a></li>
-                                <li><a class="dropdown-item" href="#">Diabetes</a></li>
-                                <li><a class="dropdown-item" href="#">Colicos</a></li>
-                                <li><a class="dropdown-item" href="#">Depresion</a></li>
-                                <li><a class="dropdown-item" href="#">Estres</a></li>
-                                <li><a class="dropdown-item" href="#">Alergias</a></li>
+                                <li><a class="dropdown-item" href="/Home/Diabetes">Diabetes</a></li>
+                                <li><a class="dropdown-item" href="/Home/Colicos">Colicos</a></li>
+                                <li><a class="dropdown-item" href="/Home/Depresion">Depresion</a></li>
+                                <li><a class="dropdown-item" href="/Home/Estres">Estres</a></li>
+                                <li><a class="dropdown-item" href="/Home/Alergias">Alergias</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">extras</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Mas">Màs</a>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +75,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Emergency - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - EmergencyP4 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

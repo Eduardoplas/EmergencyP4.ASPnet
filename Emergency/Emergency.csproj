@@ -9,7 +9,4 @@
   <ItemGroup>
     <Content Remove="wwwroot\Imagenes\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\Imagenes\" />
-  </ItemGroup>
 </Project>

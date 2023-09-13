@@ -18,7 +18,7 @@ public class HomeController : Controller
         return "hola";
     }
 
-    public IActionResult Enfermedades()
+    public IActionResult Mas()
     {
         return View();
     }
@@ -26,6 +26,23 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Diabetes()
+    {
+        return View();
+    }
+    public IActionResult Depresion()
+    {
+        return View();
+    }
+    public IActionResult Colicos()
+    {
+        return View();
+    }
+    public IActionResult Estres()
+    {
+        return View();
+    }
+   
     public IActionResult Index()
     {
         return View();
