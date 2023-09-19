@@ -2,16 +2,33 @@
     ViewData["Title"] = "EmergencyP4";
 }
 
-<div class="text-center">
-    <h1 class="display-6">Emergencias escolares</h1>
-    <div class="embed-responsive embed-responsive-16by9">
-        <img src="/Imagenes/Ambulancia.jpg" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video de Fondo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="/imagenes/emergency.webm" type="video/mp4">
+            <!-- Agrega formatos adicionales de video aquí si es necesario -->
+        </video>
+        <div class="video-overlay">
+            <!-- Contenido superpuesto (texto u otros elementos) -->
+            <div class="text-center m-5">
+                <a class="btn btn-success" href="/Cuentas/Registrar">Registrate o inicia sesion</a>
+            </div>
+        </div>
+
     </div>
-  
-</div>
-<div class="text-center m-2">
-  <a class="btn btn-success" href="/Cuentas/Registrar">Registrate o inicia sesion</a>
-</div>
+</body>
+
+<body style="background-color: black; color: white;">
+    <!-- Cambia "black" por el color que desees para el fondo -->
+    <!-- Contenido de tu página -->
+</body>
 
 <script type="text/javascript">
 

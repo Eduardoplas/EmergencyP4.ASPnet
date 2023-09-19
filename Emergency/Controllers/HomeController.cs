@@ -30,6 +30,10 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Alergias()
+    {
+        return View();
+    }
     public IActionResult Depresion()
     {
         return View();
