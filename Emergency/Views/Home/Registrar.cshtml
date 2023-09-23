@@ -1,0 +1,110 @@
+﻿
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Alumnos</title>
+    <link rel="stylesheet" type="text/css" href="~/css/estilo_form.css">
+</head>
+<body style="background-color: #333333; color: white;">
+    <div style="display: flex; justify-content: space-between;">
+        <!-- Primera columna -->
+        <div style="width: 48%;">
+            <h1>Formulario de Registro</h1>
+            <br>
+            <form action="procesar.php" method="POST">
+                <!-- Campo para el nombre -->
+                <label for="nombre">Nombre:</label>
+                <br>
+                <input type="text" id="nombre" name="nombre" required>
+                <p></p>
+                <!-- Campo para el apellido paterno -->
+                <label for="apellido_paterno">Apellido Paterno:</label>
+                <br>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+                <p></p>
+                <!-- Campo para el apellido materno -->
+                <label for="apellido_materno">Apellido Materno:</label>
+                <br />
+                <input type="text" id="apellido_materno" name="apellido_materno" required>
+                <p></p>
+                <!-- Campo para el correo electrónico (gmail) -->
+                <label for="correo">Correo Electrónico (Gmail):</label>
+                <br />
+                <input type="email" id="correo" name="correo" required>
+                <p></p>
+                <!-- Campo para la contraseña -->
+                <label for="contrasena">Contraseña:</label>
+                <br />
+                <input type="password" id="contrasena" name="contrasena" required>
+                <p></p>
+                <!-- Campo para la edad -->
+                <label for="edad">Edad:</label>
+                <br />
+                <input type="number" id="edad" name="edad" required>
+                <p></p>
+                <!-- Campo para la altura -->
+                <label for="altura">Altura (en cm):</label>
+                <br />
+                <input type="number" id="altura" name="altura" required>
+                <p></p>
+                <!-- Campo para el peso -->
+                <label for="peso">Peso (en kg):</label>
+                <br />
+                <input type="number" id="peso" name="peso" required>
+                <p></p>
+            </form>
+        </div>
+
+        <!-- Segunda columna -->
+        <div style="width: 48%;">
+          <br />
+          <br />
+            <br />
+            <!-- Campo para seleccionar la enfermedad -->
+            <label for="enfermedad">Enfermedad:</label>
+            <br />
+            <select id="enfermedad" name="enfermedad" required>
+                <option value="ansiedad">Ansiedad</option>
+                <option value="diabetes">Diabetes</option>
+                <option value="estres">Estres</option>
+                <option value="depresion">Depresiòn</option>
+                <option value="ninguno">Ninguna</option>
+                <option value="otra">Otra</option>
+            </select>
+            <p></p>
+            <!-- Campo para alergias -->
+            <label for="alergias">Alergias: (Alimetos, Medicamentos, etc.)</label>
+            <br />
+            <textarea id="alergias" name="alergias" rows="4" cols="50" required></textarea>
+            <p></p>
+            <!-- Campo para el teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <br />
+            <input type="tel" id="telefono" name="telefono" required>
+            <p></p>
+            <!-- Campo para el teléfono de emergencia -->
+            <label for="telefono_emergencia">Teléfono de Emergencia:</label>
+            <br />
+            <input type="tel" id="telefono_emergencia" name="telefono_emergencia" required>
+            <p></p>
+            <!-- Campo para el padre o tutor -->
+            <label for="padre_tutor">Padre o Tutor:</label>
+            <br />
+            <input type="text" id="padre_tutor" name="padre_tutor" required>
+            <p></p>
+            <!-- Campo para otro -->
+            <label for="otro">Otro:</label>
+            <br />
+            <input type="text" id="otro" name="otro">
+            <p></p>
+            <!-- Botón de envío -->
+            <button type="submit">Registrar Alumno</button>
+
+            <!-- Puedes agregar contenido adicional en esta columna si es necesario -->
+        </div>
+    </div>
+</body>
+</html>

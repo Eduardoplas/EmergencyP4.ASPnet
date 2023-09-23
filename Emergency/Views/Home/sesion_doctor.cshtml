@@ -1,0 +1,64 @@
+﻿<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Alumnos</title>
+    <link rel="stylesheet" type="text/css" href="~/css/estilo_form.css">
+</head>
+<body style="background-color: #333333; color: white;">
+   
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Alumnos</title>
+</head>
+<body>
+   
+    <h1>Buscar Alumnos</h1>
+                <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+                <button onclick="buscarAlumnos()">Buscar</button>
+           
+    <ul id="resultsList">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    </ul>
+
+    <script>
+        function buscarAlumnos() {
+            // Obtener el valor ingresado en el campo de búsqueda
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+
+            // Obtener la lista de alumnos (cargarl desde tu base de datos o tenerla en JavaScript)
+            var alumnos = [
+                "Juan Perez",
+                "María González",
+                "Carlos López",
+                "Ana Rodríguez",
+                "Pedro Martínez"
+                // Agrega más nombres de alumnos según tus necesidades
+            ];
+
+            // Filtrar los alumnos que coincidan con el término de búsqueda
+            var resultados = alumnos.filter(function (alumno) {
+                return alumno.toLowerCase().includes(searchTerm);
+            });
+
+            // Mostrar los resultados en la lista
+            var resultsList = document.getElementById("resultsList");
+            resultsList.innerHTML = ""; // Limpiar la lista anterior
+
+            if (resultados.length === 0) {
+                resultsList.innerHTML = "<p>No se encontraron resultados.</p>";
+            } else {
+                resultados.forEach(function (resultado) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = resultado;
+                    resultsList.appendChild(listItem);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+

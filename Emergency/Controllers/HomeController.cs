@@ -22,7 +22,20 @@ public class HomeController : Controller
     {
         return View();
     }
+
     public IActionResult Ansiedad()
+    {
+        return View();
+    }
+    public IActionResult Registrar()
+    {
+        return View();
+    }
+    public IActionResult iniciar_sesion()
+    {
+        return View();
+    }
+    public IActionResult sesion_doctor()
     {
         return View();
     }
@@ -46,7 +59,7 @@ public class HomeController : Controller
     {
         return View();
     }
-   
+
     public IActionResult Index()
     {
         return View();
