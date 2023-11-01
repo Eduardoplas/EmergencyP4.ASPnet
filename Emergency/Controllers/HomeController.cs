@@ -28,6 +28,16 @@ public class HomeController : Controller
     {
         return View();
     }
+    [HttpPost]
+    public IActionResult iniciar_sesion(IFormCollection form)
+    {
+        var correo = form["correo"];
+        var password = form["password"];
+
+        if (correo == "yo@yo.com" & password == "123") Response.Redirect("/home/sesion_doctor");
+        ViewBag.mensaje = "Correo o Password Incorrecto";
+        return View();
+    }
     public IActionResult iniciar_sesion()
     {
         
@@ -35,7 +45,8 @@ public class HomeController : Controller
     }
     public IActionResult sesion_doctor()
     {
-        return View();
+        var usuarios = emergencyp4Context.Usuarios.ToList();
+        return View(usuarios);
     }
     public IActionResult Diabetes()
     {

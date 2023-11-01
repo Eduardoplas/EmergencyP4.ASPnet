@@ -18,7 +18,7 @@ public partial class Emergencyp4Context : DbContext
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("server=localhost;user=root;password=Ceoceo77;database=emergencyp4", ServerVersion.AutoDetect("server=localhost;user=root;password=Ceoceo77;database=emergencyp4"));
+        => optionsBuilder.UseMySql("Server=MYSQL5049.site4now.net;Database=db_aa0c80_emergen;Uid=aa0c80_emergen;Pwd=Base300300", ServerVersion.AutoDetect("Server=MYSQL5049.site4now.net;Database=db_aa0c80_emergen;Uid=aa0c80_emergen;Pwd=Base300300"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
