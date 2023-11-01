@@ -28,6 +28,17 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public IActionResult Registrar(Usuario usuario)
+    {
+        emergencyp4Context.Add(usuario);
+        emergencyp4Context.SaveChanges();
+        Response.Redirect("/home/sesion_doctor");
+        return View();
+    }
+   
+
     [HttpPost]
     public IActionResult iniciar_sesion(IFormCollection form)
     {
