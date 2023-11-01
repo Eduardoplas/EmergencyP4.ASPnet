@@ -59,6 +59,14 @@ public class HomeController : Controller
         var usuarios = emergencyp4Context.Usuarios.ToList();
         return View(usuarios);
     }
+    [HttpPost]
+    public IActionResult sesion_doctor(string textoBuscar)
+    {
+
+        var usuarios = emergencyp4Context.Usuarios.Where(a => (a.Nombre + " " + a.Paterno + " " + a.Materno).Contains(textoBuscar)).ToList();
+        return View(usuarios);
+    }
+
     public IActionResult Diabetes()
     {
         return View();
