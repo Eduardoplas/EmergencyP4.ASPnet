@@ -1,28 +1,25 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Emergency.Models;
+using Emergency;
 
 namespace Emergency.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    Emergencyp4Context emergencyp4Context = new Emergencyp4Context();
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
 
-    public string StringHola()
-    {
-        return "hola";
-    }
 
     public IActionResult Mas()
     {
         return View();
     }
-
     public IActionResult Ansiedad()
     {
         return View();
@@ -33,6 +30,7 @@ public class HomeController : Controller
     }
     public IActionResult iniciar_sesion()
     {
+        
         return View();
     }
     public IActionResult sesion_doctor()
@@ -64,6 +62,15 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult DetalleUsuario(int? id)
+    {
+        if (id == null) return NotFound();
+        Usuario usuario = emergencyp4Context.Usuarios.Find(id);
+        if (usuario == null) return NotFound();
+        return View(usuario);
+    }
+
 
     public IActionResult Privacy()
     {
