@@ -34,7 +34,7 @@ public class HomeController : Controller
     {
         emergencyp4Context.Add(usuario);
         emergencyp4Context.SaveChanges();
-        Response.Redirect("/home/sesion_doctor");
+        Response.Redirect("/home/Index");
         return View();
     }
    
