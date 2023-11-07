@@ -14,8 +14,8 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
-
+    [HttpPost]
+    
     public IActionResult Mas()
     {
         return View();
@@ -30,6 +30,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
+    
     public IActionResult Registrar(Usuario usuario)
     {
         emergencyp4Context.Add(usuario);
