@@ -29,7 +29,6 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    
     public IActionResult Registrar(Usuario usuario)
     {
         emergencyp4Context.Add(usuario);
@@ -54,6 +53,33 @@ public class HomeController : Controller
         
         return View();
     }
+
+
+    public IActionResult Borrar (int id)
+    {
+        var usuarioBorrar = emergencyp4Context.Usuarios.Find(id);
+        emergencyp4Context.Usuarios.Remove(usuarioBorrar);
+        emergencyp4Context.SaveChanges();
+        return RedirectToAction("sesion_doctor");
+    }
+
+    public IActionResult Editar(int id)
+    {
+        var usuario = emergencyp4Context.Usuarios.Find(id);
+        return View(usuario);
+    }
+    [HttpPost]
+    public IActionResult Editar (Usuario usuario)
+    {
+       
+        emergencyp4Context.Entry(usuario).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+        emergencyp4Context.SaveChanges();
+
+        ViewBag.Mensaje = "Se actualizo el usuario";
+        return RedirectToAction("sesion_doctor");
+    }
+
+
     [HttpGet]
     public IActionResult sesion_doctor(string textoBuscar)
     {

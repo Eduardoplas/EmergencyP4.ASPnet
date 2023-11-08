@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionStringDefault = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DataIdentityContextConnection' not found.");
 
 //MySQL
-//MySQL por si separo
 builder.Services.AddDbContext<Emergencyp4Context>(options =>
    options.UseMySql(connectionStringDefault, ServerVersion.AutoDetect(connectionStringDefault)));
 

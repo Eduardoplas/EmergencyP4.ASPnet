@@ -79,7 +79,17 @@
             @Html.DisplayFor(model => model.Otro)
         </dd>
     </dl>
-  
+
+    <div class="row">
+        <div class="col col-1">
+<a asp-controller="home" asp-action="editar" asp-route-id="@Model.Id" class="btn btn-success">Editar</a>
+        </div>
+        <div class="col col-1">
+<a asp-controller="home" asp-action="borrar" asp-route-id="@Model.Id" class="btn btn-danger">Borrar</a>
+        </div>
+        
+        
+    </div>
 </div>
 
 
