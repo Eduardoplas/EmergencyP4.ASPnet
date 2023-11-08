@@ -60,7 +60,7 @@ public class HomeController : Controller
         var usuarios = emergencyp4Context.Usuarios.ToList();
         return View(usuarios);
     }
-    [HttpPost]
+    [HttpGet]
     public IActionResult sesion_doctor(string textoBuscar)
     {
 
