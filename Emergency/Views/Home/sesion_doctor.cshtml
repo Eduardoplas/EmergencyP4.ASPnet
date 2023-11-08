@@ -2,9 +2,9 @@
 
    
     <h1>Alumnos</h1>
-<form asp-action="sesion_doctor">
+<form asp-action="sesion_doctor" method="get" >
     <div class="row">
-       <div class="col"> <input type="text" name="textoBuscar" /></div>
+       <div class="col"> <input type="text" name="textoBuscar" value="@ViewBag.textobuscar" /></div>
        <div class="col"><input type="submit" value="Buscar" /></div>
         
     </div>

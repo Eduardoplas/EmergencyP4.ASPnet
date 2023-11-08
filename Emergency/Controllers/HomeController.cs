@@ -14,7 +14,6 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-    [HttpPost]
     
     public IActionResult Mas()
     {
@@ -55,16 +54,19 @@ public class HomeController : Controller
         
         return View();
     }
-    public IActionResult sesion_doctor()
-    {
-        var usuarios = emergencyp4Context.Usuarios.ToList();
-        return View(usuarios);
-    }
     [HttpGet]
     public IActionResult sesion_doctor(string textoBuscar)
     {
-
-        var usuarios = emergencyp4Context.Usuarios.Where(a => (a.Nombre + " " + a.Paterno + " " + a.Materno).Contains(textoBuscar)).ToList();
+        var usuarios = new List<Usuario>();
+        if (textoBuscar != "" && textoBuscar != null)
+        {
+         usuarios = emergencyp4Context.Usuarios.Where(a => (a.Nombre + " " + a.Paterno + " " + a.Materno).Contains(textoBuscar)).ToList();
+        }
+        else
+        {
+            usuarios = emergencyp4Context.Usuarios.ToList();
+        }
+        ViewBag.textoBuscar = textoBuscar;
         return View(usuarios);
     }
 
